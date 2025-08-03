@@ -1,8 +1,12 @@
-<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
+﻿<Project Sdk="Microsoft.NET.Sdk.WindowsDesktop">
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net6.0-windows</TargetFramework>
     <UseWindowsForms>true</UseWindowsForms>
     <RootNamespace>OneLineParagraph</RootNamespace>
+    <ApplicationIcon>bin\Debug\net6.0-windows\administrative_tools.ico</ApplicationIcon>
   </PropertyGroup>
+  <ItemGroup>
+    <Content Include="bin\Debug\net6.0-windows\administrative_tools.ico" />
+  </ItemGroup>
 </Project>
