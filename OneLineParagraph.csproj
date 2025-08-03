@@ -7,6 +7,6 @@
     <ApplicationIcon>bin\Debug\net6.0-windows\administrative_tools.ico</ApplicationIcon>
   </PropertyGroup>
   <ItemGroup>
-    <Content Include="bin\Debug\net6.0-windows\administrative_tools.ico" />
+    <None Include="bin\Debug\net6.0-windows\administrative_tools.ico" />
   </ItemGroup>
 </Project>
