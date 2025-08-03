@@ -18,6 +18,7 @@ namespace OneLineParagraph
             txtInput = new System.Windows.Forms.TextBox();
             btnConvert = new System.Windows.Forms.Button();
             txtOutput = new System.Windows.Forms.TextBox();
+            btnScramble = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // txtInput
@@ -40,7 +41,7 @@ namespace OneLineParagraph
             // 
             // txtOutput
             // 
-            txtOutput.Location = new System.Drawing.Point(12, 160);
+            txtOutput.Location = new System.Drawing.Point(12, 192);
             txtOutput.Multiline = true;
             txtOutput.Name = "txtOutput";
             txtOutput.ReadOnly = true;
@@ -48,17 +49,28 @@ namespace OneLineParagraph
             txtOutput.Size = new System.Drawing.Size(750, 100);
             txtOutput.TabIndex = 2;
             // 
+            // btnScramble
+            // 
+            btnScramble.Location = new System.Drawing.Point(12, 156);
+            btnScramble.Name = "btnScramble";
+            btnScramble.Size = new System.Drawing.Size(750, 30);
+            btnScramble.TabIndex = 1;
+            btnScramble.Text = "ScrambledTextGenerator";
+            btnScramble.Click += btnScramble_Click;
+            // 
             // Form1
             // 
-            ClientSize = new System.Drawing.Size(774, 271);
+            ClientSize = new System.Drawing.Size(774, 301);
             Controls.Add(txtInput);
+            Controls.Add(btnScramble);
             Controls.Add(btnConvert);
             Controls.Add(txtOutput);
-            MaximumSize = new System.Drawing.Size(790, 310);
             Name = "Form1";
             Text = "Paragraph to One Line";
             ResumeLayout(false);
             PerformLayout();
         }
+
+        private System.Windows.Forms.Button btnScramble;
     }
 }
