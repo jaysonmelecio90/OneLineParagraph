@@ -1,6 +1,7 @@
 using System;
 using System.Drawing;
 using System.Linq;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
 
@@ -110,6 +111,26 @@ namespace OneLineParagraph
             }
         }
 
+        private void BtnStringToBinary_Click(object sender, EventArgs e)
+        {
+            string input = txtInput.Text;
+            byte[] bytes = Encoding.UTF8.GetBytes(input);
+            txtOutput.Text = string.Join(" ", bytes.Select(b => Convert.ToString(b, 2).PadLeft(8, '0')));
 
+        }
+
+        private void BtnBinaryToString_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                string[] binaryCodes = txtInput.Text.Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+                byte[] bytes = binaryCodes.Select(b => Convert.ToByte(b, 2)).ToArray();
+                txtOutput.Text = Encoding.UTF8.GetString(bytes);
+            }
+            catch
+            {
+                MessageBox.Show("Invalid binary format!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }
